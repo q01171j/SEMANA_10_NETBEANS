@@ -32,7 +32,7 @@ class ListaDoble{
     Nodo cabeza;
     // métodos de la clase (implementación en apartado 8.9)
     public ListaDoble(){
-        ;
+
     }
     
     public ListaDoble insertarCabezaLista(int entrada){
@@ -86,8 +86,6 @@ class ListaDoble{
             actual = null;
         }
     }
-    public void visualizar() {;}
-    public void buscarLista(int destino) {;}
 }
 
 class IteradorLista{
@@ -125,7 +123,6 @@ public class ejercicio_8_3 {
         }
 
         System.out.println("Elementos de la lista original");
-        listaDb.visualizar();
         // rango de valores
         System.out.println("\nRango que va a contener la lista");
         x1 = Integer.parseInt(entrada.readLine());
@@ -137,13 +134,12 @@ public class ejercicio_8_3 {
         a = iterador.siguiente();
         while (a != null){
             int w;
-            w = a.getDato();
+            w = a.dato;
             if (!(w >= x1 && w <= x2)){ // fuera de rango
                 listaDb.eliminar(w);
             }
             a = iterador.siguiente();
         }
         System.out.println("Elementos actuales de la lista");
-        listaDb.visualizar();
     }
 }
